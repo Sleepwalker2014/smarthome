@@ -13,13 +13,13 @@
 </body>
 
 <script>
-    let ledStatus = 0;
+    let ledStatus = true;
 
     $(function () {
-        $('#ledButton').click(turnOnLed);
+        $('#ledButton').click(setLedStatus);
     });
 
-    function turnOnLed () {
+    function setLedStatus () {
         ledStatus = !ledStatus;
 
         $.post('test.php', {'value' : ledStatus});
