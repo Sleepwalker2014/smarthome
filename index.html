@@ -13,7 +13,7 @@
 </body>
 
 <script>
-    let ledStatus = true;
+    let ledStatus = false;
 
     $(function () {
         $('#ledButton').click(setLedStatus);
@@ -23,6 +23,10 @@
         ledStatus = !ledStatus;
 
         $.post('test.php', {'value' : ledStatus});
+
+        (isMember ? '$2.00' : '$10.00');
+
+        $('#ledButton').text('Turn ' + (ledStatus ? 'off' : 'on') + ' LED');
     }
 </script>
 </html>
