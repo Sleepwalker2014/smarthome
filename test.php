@@ -9,3 +9,4 @@ echo $_POST['value'];
 
 shell_exec('gpio -g mode 25 '.GPIO_MODES['output']);
 shell_exec('gpio -g write 25 '.($_POST['value'] ? DIGITAL_TRUE : DIGITAL_FALSE));
+echo 'gpio -g write 25 '.($_POST['value'] ? DIGITAL_TRUE : DIGITAL_FALSE);
